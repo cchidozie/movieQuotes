@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Backend//public/main.js" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <h1>Movie Quotes</h1>
+
+    <ul class="rappers">
+      <% for(let i=0; i < info.length; i++) {%>
+      <li class="rapper">
+        <span><%= info[i].mCharacter %></span>
+        <span> - </span>
+        <span><%= info[i].mQuote%></span>
+        <span class="fa fa-thumbs-up"></span>
+        <span class="fa fa-trash"></span>
+      </li>
+      <% } %>
+    </ul>
+
+    <form action="/addQuotes" method="POST">
+      <input type="text" placeholder="Enter character name" name="mCharacter" />
+      <input type="text" placeholder="Enter quote" name="mQuote" />
+      <input type="submit" />
+    </form>
+
+    <script src="/Backend/public/main.js"></script>
+  </body>
+</html>
